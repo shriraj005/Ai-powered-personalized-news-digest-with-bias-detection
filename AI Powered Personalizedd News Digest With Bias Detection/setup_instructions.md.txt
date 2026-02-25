@@ -1,0 +1,124 @@
+AI-Based News Bias Detection & Neutralization System
+ System Requirements
+
+Make sure the following are installed:
+
+Python 3.8 or higher
+
+pip (Python package manager)
+
+Internet connection (for first-time model download)
+
+Minimum 8GB RAM recommended
+
+GPU (optional but recommended)
+
+Check Python version:
+
+python --version
+Project Folder Structure
+
+
+Project_Name/
+│
+├── requirements.txt
+├── README.md
+├── INSTRUCTIONS.md
+│
+└── src/
+    └── app.py
+Installation Steps
+Step 1: Install Required Libraries
+
+Run:
+
+pip install -r requirements.txt
+
+If requirements.txt is not available:
+
+pip install torch transformers gradio newspaper3k matplotlib
+
+ Running the Application
+
+Navigate to project root directory:
+
+cd Project_Name
+
+Then run:
+
+python src/app.py
+
+After running successfully, you will see:
+
+Running on local URL: http://127.0.0.1:7860
+
+Open this link in your browser.
+
+ How to Use the System
+Option 1: Enter Article URL
+
+Paste a news article URL
+
+Click Submit
+
+Option 2: Paste Raw Text
+
+Paste news content directly
+
+Click Submit
+
+System will:
+
+Extract content
+
+Summarize article
+
+Detect bias (Left / Right / Center)
+
+Generate neutral version
+
+Show bias comparison graph
+
+Display bias reduction %
+
+
+ Models Used
+
+Summarization Model: facebook/bart-large-cnn
+
+Bias Detection Model: facebook/bart-large-mnli
+
+Framework: HuggingFace Transformers
+
+Models will automatically download on first run.
+
+Troubleshooting
+🔹 Error: CUDA not available
+
+Solution:
+
+Install correct PyTorch version
+
+Or run on CPU (default fallback)
+
+🔹 Error: newspaper3k fails to extract article
+
+Solution:
+
+Try copy-pasting raw text instead of URL
+
+🔹 Slow performance
+
+Solution:
+
+Use GPU
+
+Or reduce model to bart-base
+
+8️⃣ Performance Notes
+
+First run may take time (model download)
+
+Subsequent runs will be faster
+
+GPU significantly improves performance

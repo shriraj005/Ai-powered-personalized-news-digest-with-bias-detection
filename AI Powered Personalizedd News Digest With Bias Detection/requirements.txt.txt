@@ -1,0 +1,8 @@
+torch
+transformers
+gradio
+newspaper3k
+matplotlib
+lxml
+numpy
+scikit-learn
